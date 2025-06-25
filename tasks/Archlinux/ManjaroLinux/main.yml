@@ -1,0 +1,7 @@
+---
+- name: Enable default Network
+  ansible.builtin.command: virsh net-autostart default
+  register: mymotd
+  become: true	# Manjaro requires sudo for virsh commands
+
+
