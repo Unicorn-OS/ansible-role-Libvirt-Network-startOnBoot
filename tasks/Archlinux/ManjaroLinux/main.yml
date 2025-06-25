@@ -3,5 +3,6 @@
   ansible.builtin.command: virsh net-autostart default
   register: mymotd
   become: true	# Manjaro requires sudo for virsh commands
-
-
+  creates: "{{ idempotent_file }}"
+  # Todo: Figure out where it's Saved!
+  notify: make Idempotent

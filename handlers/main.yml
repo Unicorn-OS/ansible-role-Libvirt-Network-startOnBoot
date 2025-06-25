@@ -1,3 +1,8 @@
-#SPDX-License-Identifier: MIT-0
 ---
-# handlers file for foo
+- name: make Idempotent
+  ansible.builtin.file:
+    path: "{{ idempotent_file }}"
+    owner: root
+    group: root
+    mode: '0644'
+  become: true

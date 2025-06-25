@@ -1,3 +1,2 @@
-#SPDX-License-Identifier: MIT-0
 ---
-# vars file for foo
+idempotent_file: /var/lib/libvirt/network/startOnBoot
