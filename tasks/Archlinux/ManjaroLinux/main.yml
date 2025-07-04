@@ -1,6 +1,6 @@
 ---
 - name: Enable default Network
-  ansible.builtin.command: "virsh net-autostart {{ default }}"
+  ansible.builtin.command: "virsh net-autostart {{ network }}"
   args:
     # Todo: Figure out where it's Saved!
     creates: "{{ idempotent_file }}"
