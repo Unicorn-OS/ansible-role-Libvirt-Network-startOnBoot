@@ -1,7 +1,8 @@
 ---
-- name: make Idempotent
+- name: make Idempotent file
   ansible.builtin.file:
     path: "{{ idempotent_file }}"
+    state: touch
     owner: root
     group: root
     mode: '0644'

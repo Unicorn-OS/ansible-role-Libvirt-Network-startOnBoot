@@ -2,7 +2,7 @@
 - name: Enable default Network
   ansible.builtin.command: "virsh net-autostart {{ network }}"
   args:
-    # Todo: Figure out where it's Saved!
+    # Todo: Figure out where network configuration is Saved!
     creates: "{{ idempotent_file }}"
-  notify: make Idempotent
+  notify: make Idempotent file
   become: true	# Manjaro requires sudo for virsh commands

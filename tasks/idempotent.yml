@@ -1,0 +1,8 @@
+---
+- name: make Idempotent dir
+  ansible.builtin.file:
+    path: "{{ idempotent_dir }}"
+    state: directory
+    owner: "{{ ansible_env.USER }}"
+    group: "{{ ansible_env.USER }}"
+  become: true

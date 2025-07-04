@@ -1,2 +1,4 @@
 ---
-idempotent_file: /var/lib/libvirt/network/startOnBoot
+idempotent_dir: /var/lib/libvirt/network/startOnBoot
+
+idempotent_file: "{{ idempotent_dir }}/{{ network }}.log"

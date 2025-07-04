@@ -1,2 +1,6 @@
+---
+- name: pre
+  include_tasks: "idempotent.yml"
+
 - name: OS specific
   include_tasks: "{{ ansible_os_family }}/main.yml"
